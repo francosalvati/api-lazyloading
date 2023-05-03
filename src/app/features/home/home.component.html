@@ -1,0 +1,14 @@
+<div class="d-flex justify-content-between w-100">
+  <h2>Este es el Home</h2>
+  <button class="btn btn-primary" (click)="exit()">Exit</button>
+</div>
+
+
+
+<h3 class="my-2 display-5">Lista de usuarios</h3>
+
+<ul class="list-group">
+  <li *ngFor="let user of usuarios" class="list-group-item d-flex justify-content-around w-100 text-warning text-bg-dark">
+    <span class="d-block">Nombre: {{user.nombre}}</span> <span class="d-block"> Roll: {{user.role}}</span>
+  </li>
+</ul>

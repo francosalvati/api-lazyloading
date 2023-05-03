@@ -1,0 +1,28 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nombre": "franco",
+      "email": "franco@gmail.com",
+      "password": "1234",
+      "token": "asjdkhasjhdgalksdjf9j1i",
+      "role": "admin"
+    },
+    {
+      "id": "2",
+      "nombre": "jose",
+      "email": "jose@gmail.com",
+      "password": "abcd",
+      "token": "g7896bh56ftg789bngh78ohjsdf",
+      "role": "user"
+    },
+    {
+      "id": "3",
+      "nombre": "admin",
+      "email": "admin@admin.com",
+      "password": "12345",
+      "token": "asdasdlkjikh31231sdf",
+      "role": "admin"
+    }
+  ]
+}

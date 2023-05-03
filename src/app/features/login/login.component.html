@@ -1,0 +1,57 @@
+<div class="container d-flex justify-content-center align-items-center">
+  <div class="w-25 text-center card p-4">
+    <main class="form-signin w-100 m-auto">
+
+      <form [formGroup]='loginForm' (ngSubmit)="onSubmit()">
+        <h1 class="h3 mb-4 fw-normal">Login</h1>
+
+        <div class="form-floating">
+          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"
+            formControlName="email" [ngClass]="{
+              'is-invalid': emailControl.invalid && emailControl.touched
+          }">
+          <label for="floatingInput">Email</label>
+          <div class="invalid-feedback text-start" *ngIf="emailControl.hasError('required')">
+            es requerido
+          </div>
+          <div class="invalid-feedback text-start" *ngIf="emailControl.hasError('email')">
+            no ha introducido un mail
+          </div>
+        </div>
+
+
+        <div class="form-floating mt-2">
+          <input type="password" class="form-control" [ngClass]="{
+              'is-invalid': passwordControl.invalid && passwordControl.touched
+          }" id="floatingInput2" placeholder="****" formControlName="password">
+          <label for="floatingInput2">Password</label>
+          <div class="invalid-feedback text-start" *ngIf="passwordControl.hasError('required')">
+            es requerido
+          </div>
+        </div>
+
+
+        <button class="w-100 btn btn-lg btn-primary mt-4" type="submit">Entrar</button>
+
+
+
+        <p class="mt-5 mb-3 text-body-secondary">© 2017–2023</p>
+      </form>
+
+
+      <!-- toast  -->
+    </main>
+  </div>
+
+  <ngb-toast *ngIf="show" class="text-bg-danger toast position-absolute text-center" (hide)="show=false" [delay]="2000"> Contrasenia o usuario incorrecto </ngb-toast>
+
+
+  <div class="position-absolute pista">
+    <button class="btn btn-dark" (click)="handleMostrar()">pista</button>
+    <pre [ngClass]="{
+      'd-none': mostrar
+    }">{{pista}}</pre>
+  </div>
+
+
+</div>
